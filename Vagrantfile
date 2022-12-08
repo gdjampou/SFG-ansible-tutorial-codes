@@ -11,14 +11,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do|config|
     config.vm.define "web1" do|web| 
         web.vm.hostname = "master" 
         web.vm.box = "geerlingguy/centos7" 
-        web.vm.network "private_network", ip: "192.168.43.14" 
+        web.vm.network "private_network", ip: "192.168.56.90" 
     end 
     
     #Application Server1 
     config.vm.define "app1" do|app| 
         app.vm.hostname = "webserver" 
         app.vm.box = "geerlingguy/centos7" 
-        app.vm.network "private_network", ip: "192.168.43.11" 
+        app.vm.network "private_network", ip: "192.168.56.91" 
     end 
     
     
@@ -26,10 +26,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do|config|
     config.vm.define "db" do|db| 
         db.vm.hostname = "database" 
         db.vm.box = "geerlingguy/centos7" 
-        db.vm.network "private_network", ip: "192.168.43.13" 
+        db.vm.network "private_network", ip: "192.168.56.92" 
     end 
     
     config.vm.box_check_update = false 
-    config.vbguest.auto_update = false 
+    #config.vbguest.auto_update = false 
 end
 
