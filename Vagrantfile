@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do|config|
     
     #Web Server 
     config.vm.define "web1" do|web| 
-        web.vm.hostname = "master" 
+        web.vm.hostname = "Workstation" 
         web.vm.box = "geerlingguy/centos7" 
         web.vm.network "private_network", ip: "192.168.56.90" 
     end 
